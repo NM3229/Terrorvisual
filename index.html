@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="visualisation">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>NM3229 Group FP07</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  <script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
+
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <script type="text/javascript" src="js/tableau-2.js"></script>
+  <script type="text/javascript" src="js/angular-tableau.js"></script>
+  <script type="text/javascript" src="node_modules/ng-dialog/js/ngDialog.min.js"></script>
+  <script type="text/javascript" src="node_modules/angular-hotkeys/build/hotkeys.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="bower_components/bootstrap-tour/build/js/bootstrap-tour.js"></script>
+  <script type="text/javascript" src="bower_components/angular-bootstrap-tour/dist/angular-bootstrap-tour.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="node_modules/ng-dialog/css/ngDialog.min.css" rel="stylesheet">
+  <link href="node_modules/ng-dialog/css/ngDialog-theme-default.css" rel="stylesheet">
+  <link href="node_modules/angular-hotkeys/build/hotkeys.min.css" rel="stylesheet">
+  <link href="node_modules/angular-hotkeys/build/hotkeys.min.css" rel="stylesheet">
+  <link href="node_modules/angular-tooltips/dist/angular-tooltips.css" rel="stylesheet" type="text/css" />
+
+  <!-- <link href="node_modules/bootstrap-tour-0.10.2/build/css/bootstrap-tour-standalone.min.css" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="bower_components/bootstrap-tour/build/css/bootstrap-tour.css" />
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+  <link href="cover.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+ <div id="landing-wrapper" class="site-wrapper" ng-controller="TabController as tab">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+
+      <nav class="navbar navbar-inverse navbar-fixed-top" ng-hide="tab.hideNavbar">
+       <div class="container masthead clearfix" >
+        <!-- <div class="inner"> -->
+        <h3 class="masthead-brand" ng-class="{active:tab.isSet(1)}"><a href="#" ng-click="tab.setTab(1)">FP07</a>
+        </h3>
+        <nav ng-controller="MainCtrl as main">
+         <ul class="nav masthead-nav">
+          <li ng-class="{active:tab.isSet(6)}"><a href="#" ng-click="tab.setTab(6)">Overview</a></li>
+          <li ng-class="{active:tab.isSet(2)}"><a href="#" ng-click="tab.setTab(2)">By Weapons</a></li>
+          <li ng-class="{active:tab.isSet(7)}"><a href="#" ng-click="tab.setTab(7)">Top Groups</a></li>
+          <li ng-class="{active:tab.isSet(3)}"><a href="#" ng-click="clickToOpen()">About</a></li></ul>
+        </nav>
+      </div>
+    </nav>
+
+
+    <!-- Landing Page -->
+    <div class="inner cover" ng-show="tab.isSet(1)">
+     <h1 class="cover-heading" tour-step title="Main Menu" content="{{mainMenuDescription}}" >{{"Terrorism"}}</h1>
+     <p class="lead">is defined as the use of violence, or threatened use of violence, in order to achieve a political, religious, or ideological aim. In recent times, terrorism is considered a major threat to society.</p>
+     <p class="lead">
+      <a href="#" ng-click="tab.setTab(6)" class="btn btn-lg btn-default red">Learn more</a>
+    </p>
+  </div>
+
+  <!--Team members-->
+  <div class="inner cover" ng-show="tab.isSet(4)">
+   <h1 class="cover-heading">Team Members</h1>
+   <p class="lead">
+    Anton Tan </br>
+    Chan Siyin</br>
+    Daren Tan</br>
+    Jasmine Moh</br>
+    Low Zheng Yang</br></p>
+  </div>
+</div> <!-- Cover Container -->
+
+
+<!--Overview-->
+<div ng-show="tab.isSet(6)" >
+  <div class="cover-container">
+   <div class="inner cover">
+    <h1 class="cover-heading">{{"Rising Danger"}}</h1>
+    <p class="lead">Between 2000 and 2014, the number of terrorist attacks has been surging. The most number of deaths occurred in the Middle Eastern region. Use the visualisation below to explore this yourself.</p>
+  </div>
+</div>
+
+<div class='tableauPlaceholder container-center' style='width: 1000px; height: 860px;  border-radius: 35px;'>
+ <noscript>
+  <a href='#'><img alt='Dashboard 1 ' 
+   src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DB&#47;DB1_9&#47;Dashboard1&#47;1_rss.png' 
+   style='border:none' />
+ </a>
+</noscript>
+<object class='tableauViz' width='1000' height='860'>
+  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+  <param name='site_root' value='' />
+  <param name='name' value='DB1_9&#47;Dashboard1' />
+  <param name='tabs' value='no' />
+  <param name='toolbar' value='no' />
+  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DB&#47;DB1_9&#47;Dashboard1&#47;1.png' />
+  <param name='animate_transition' value='yes' />
+  <param name='display_static_image' value='yes' />
+  <param name='display_spinner' value='yes' />
+  <param name='display_overlay' value='yes' />
+  <param name='display_count' value='no' />
+  <param name='showTabs' value='n' />
+</object>
+</div>
+</div>
+
+
+<!-- By Weapon -->
+<div ng-show="tab.isSet(2)">
+  <div class="cover-container">
+   <div class="inner cover">
+    <h1 class="cover-heading">{{"Different Types of Attacks"}}</h1>
+    <p class="lead">Between 2000 and 2014, the number of terrorist attacks has been surging. The most number of deaths occurred in the Middle Eastern region. Use the visualisation below to explore this yourself.</p>
+  </div>
+</div>
+
+<div class='tableauPlaceholder container-center' style='width: 1000px; height: 860px;  border-radius: 35px;'>
+ <noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DB&#47;DB2_8&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript>
+ <object class='tableauViz' width='1000' height='860' >
+  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+  <param name='site_root' value='' />
+  <param name='name' value='DB2_8&#47;Dashboard2' />
+  <param name='tabs' value='no' />
+  <param name='toolbar' value='no' />
+  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DB&#47;DB2_8&#47;Dashboard2&#47;1.png' />
+  <param name='animate_transition' value='yes' />
+  <param name='display_static_image' value='yes' />
+  <param name='display_spinner' value='yes' />
+  <param name='display_overlay' value='yes' />
+  <param name='display_count' value='no' />
+  <param name='showTabs' value='n' />
+</object>
+</div>
+</div>
+
+<!--Terrorists Groups names-->
+<div ng-show="tab.isSet(7)">
+  <div class="inner cover" ng-show="tab.isSet(7)">
+   <h1 class="cover-heading">Top Terrorist Groups</h1>
+   <p class="lead">
+    These are the top 5 terrorist groups and how they grew over the years.
+  </p>
+
+  <div >
+  <div class="container-center" style="background-color: white; padding: 10px; width:800px; 
+  border-radius: 35px">
+    <img src="images/taliban-logo.jpg" tooltips tooltip-template="
+    <h3>Taliban</h3>
+    <p>The Taliban emerged in the early 1990s in northern Pakistan following the withdrawal of Soviet troops from Afghanistan. A predominantly Pashtun movement, the Taliban came to prominence in Afghanistan in the autumn of 1994. 
+
+    <p>The Taliban's promise - in Pashtun areas straddling Pakistan and Afghanistan - was to restore peace and security and enforce their own austere version of Sharia, or Islamic law, once in power.</p>
+" tooltip-side="right" tooltip-size="large" height="120" width="120"/>
+
+    <img class="terrorist-group-logo" src="images/cpi-maoist-logo.png" tooltips tooltip-template="
+    <h3>Communist Party of India - Maoist</h3>
+    <p>The Communist Party of India (Maoist) is a Maoist insurgent communist party in India which aims to overthrow the government of India through people's war. </p>
+    <p>It was founded on 21 September 2004, through the merger of the Communist Party of India (Marxist–Leninist) People's War (People's War Group), and the Maoist Communist Centre of India (MCCI).</p>
+<p>The CPI (Maoist) believes that the Indian state is being run by a collaboration of imperialists, the comprador bourgeoisie and feudal lords.</p>
+" tooltip-side="right" tooltip-size="large"/>
+
+    <img class="terrorist-group-logo" src="images/al-shabaab-logo.png" tooltips tooltip-template="
+        <h3>Al-Shabaab</h3>
+    <p>Al-Shabaab is a jihadist terrorist group based in East Africa. In 2012, it pledged allegiance to the militant Islamist organization Al-Qaeda.</p>
+<p>The group describes itself as waging jihad against Enemies of Islam, and is engaged in combat against the Federal Government of Somalia and the African Union Mission to Somalia (AMISOM).</p>
+" tooltip-side="right" tooltip-size="large"/>
+
+    <img class="terrorist-group-logo" src="images/boko-haram-logo.png" tooltips tooltip-template="
+            <h3>Boko Haram</h3>
+    <p>Boko Haram had alleged links to Al-Qaeda, but in March 2015, it announced its allegiance to the Islamic State of Iraq and the Levant (ISIL).</p>
+<p>Since the current insurgency started in 2009, it has killed 20,000 and displaced 2.3 million from their homes and was ranked as the world's deadliest terror group by the Global Terrorism Index in 2015.
+</p>
+<p>The group has said it wants to be known by a phrase that translate to People Committed to the Prophet’s Teachings for Propagation and Jihad.
+</p>
+" tooltip-side="left" tooltip-size="large"/>
+
+    <img class="terrorist-group-logo" src="images/isil-logo.png" tooltips tooltip-template="
+    <h3>Islamic State of Iraq and the Levant (ISIL)</h3>
+    <p>Alternatively translated as Islamic State of Iraq and Syria or Islamic State of Iraq and al-Sham (ISIS). ISIL is a Salafi jihadist militant group that follows an Islamic fundamentalist, Wahhabi doctrine of Sunni Islam.</p>
+<p>As a caliphate, it claims religious, political and military authority over all Muslims worldwide.
+ISIL gained prominence in early 2014 when it drove Iraqi government forces out of key cities in its Western Iraq offensive, followed by the capture of Mosul and the Sinjar massacre.</p>
+" tooltip-side="left" tooltip-size="large"/>
+  </div>
+  </div> <!--Lol-->
+  <!-- <a href="#" >Hover over me</a> -->
+
+</div>
+<div class='tableauPlaceholder container-center' style='width: 1000px; height: 860px;  border-radius: 35px;'>
+ <noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DB&#47;DB3_0&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript>
+ <object class='tableauViz' width='1000' height='860'>
+  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+  <param name='site_root' value='' />
+  <param name='name' value='DB3_0&#47;Dashboard3' />
+  <param name='tabs' value='no' />
+  <param name='toolbar' value='no' />
+  <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DB&#47;DB3_0&#47;Dashboard3&#47;1.png' />
+  <param name='animate_transition' value='yes' />
+  <param name='display_static_image' value='yes' />
+  <param name='display_spinner' value='yes' />
+  <param name='display_overlay' value='yes' />
+  <param name='display_count' value='no' />
+  <param name='showTabs' value='n' />
+</object>
+</div>
+
+</div>
+
+
+<div class="mastfoot container-center">
+  <div class="inner cover">
+   <p>Final Data Visualisation for NM3229 by 
+    <a href="#us" ng-click="tab.setTab(4)">us</a>.
+  </p>
+</div>
+</div> <!-- Mastfoot -->				
+<button class="btn-default btn-xs" ng-click="tab.toggleNavbar()" ng-hide="tab.isSet(1)" style="position: fixed; top: 70px; right:10px; background-color: black; color: white;">{{tab.navbarUpDown}}</button>
+</div>
+
+     <!--  <a>Hover over me!</a>
+     <div>Stuff shown on hover</div> -->
+   </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+<!-- 
+    <script>
+//Array of images which you want to show: Use path you want.
+var images=new Array('images/paris.jpg','images/911-pool.jpg');
+var nextimage=0;
+doSlideshow();
+
+function doSlideshow(){
+    if(nextimage>=images.length){nextimage=0;}
+    $('#landing-wrapper')
+    .css('background-image','url("'+images[nextimage++]+'")')
+    .fadeIn(7500,function(){
+        setTimeout(doSlideshow,3000);
+    });
+}
+</script> -->
+
+<script type="text/ng-template" id="templateId">
+	<h2>About This Visualisation</h2>
+	<p>This interactive data visualization allows audience to explore how terrorist attacks have evolved over the years, as well as how it differs among various regions in the world. 
+	</p>
+	<p>
+		The target audience includes various stakeholders who may have interest in terrorism, such as travellers, governments, and the general public who wish to study this issue further.
+	</p>
+</script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
+<script src="node_modules/angular-tooltips/dist/angular-tooltips.min.js"></script>
+
+</body>
+</html>

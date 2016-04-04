@@ -1,0 +1,89 @@
+
+.check-element {
+  padding:10px;
+}
+
+.white {
+  color: white;
+  font-size: 20px;
+}
+
+.red {
+	color: #F2385A;
+}
+
+body{
+ /*background: url("images/paris.jpg") no-repeat center center;
+ background-size:cover;
+ background-attachment: fixed;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ text-align: center;*/
+ font-family: 'Product Sans', Arial, sans-serif;
+
+}
+
+.container-center {
+  margin: 0 auto;
+}
+
+.ngdialog.ngdialog-theme-custom {
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+.cover{
+/*background-color: rgba(0, 0, 0, 0.65);*/
+padding: 15px;
+}
+
+#landing-wrapper {
+  display: table;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/paris.jpg');
+  background-position: center top;
+ background-size:cover;
+  height: 350px;
+  color: white;
+}
+
+.ngdialog.ngdialog-theme-custom .ngdialog-overlay {
+  background: rgba(0,0,0,.9);
+}
+
+.cfp-hotkeys-container {
+    background-color: rgba(0,0,0,0.95);
+     color: #ddd;
+
+}
+
+
+.cfp-hotkeys table {
+  margin: auto;
+  color: #ddd;
+}
+
+.cfp-hotkeys-key {
+    color: #333;
+
+  background-color: #ddd;
+  border: 1px solid #ddd;
+}
+
+.terrorist-group-logo{
+  height: 120px;
+  width: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+/*div {
+    display: none;
+}
+
+a:hover + div {
+    display: block;
+}*/
