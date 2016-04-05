@@ -5,7 +5,13 @@ app.controller("TabController", function($scope, $timeout){
 	this.hideNavbar = false;
 	this.navbarUpDown = "\u2191";
 
+	this.backTab = 1;
+
 	this.setTab = function(newTab){
+		if (newTab === 4){
+			this.backTab = this.tab;
+
+		}
 		this.tab = newTab;
 	};
 
@@ -15,6 +21,10 @@ app.controller("TabController", function($scope, $timeout){
 
 	this.toggleNavbar = function(){
 		this.hideNavbar = !this.hideNavbar;
+	}
+
+	this.goback = function(){
+		this.setTab(this.backTab);
 	}
 
 });
