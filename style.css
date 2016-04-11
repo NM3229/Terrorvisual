@@ -98,3 +98,14 @@ padding: 15px;
 a:hover + div {
     display: block;
 }*/
+
+@font-face {
+font-family: BebasNeue;
+src: url("fonts/BebasNeue.otf") format("opentype");
+}
+
+@font-face {
+font-family: BebasNeue;
+font-weight: bold;
+src: url("fonts/BebasNeue.otf") format("opentype");
+}

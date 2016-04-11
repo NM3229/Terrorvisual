@@ -48,6 +48,20 @@
   <link href="cover.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 
+  <style>
+
+  @font-face {
+  /*font-family: BebasNeue;*/
+  src: url("fonts/BebasNeue.otf") format("opentype");
+  }
+
+  @font-face {
+  /*font-family: BebasNeue;*/
+  font-weight: bold;
+  src: url("fonts/BebasNeue.otf") format("opentype");
+  }
+  </style>
+
 </head>
 
 <body>
@@ -64,7 +78,7 @@
         <nav ng-controller="MainCtrl as main">
          <ul class="nav masthead-nav">
           <li ng-class="{active:tab.isSet(6)}"><a href="#" ng-click="tab.setTab(6)">Overview</a></li>
-          <li ng-class="{active:tab.isSet(2)}"><a href="#" ng-click="tab.setTab(2)">By Weapons</a></li>
+          <li ng-class="{active:tab.isSet(2)}"><a href="#" ng-click="tab.setTab(2)">By Event Type</a></li>
           <li ng-class="{active:tab.isSet(7)}"><a href="#" ng-click="tab.setTab(7)">Top Groups</a></li>
           <li ng-class="{active:tab.isSet(3)}"><a href="#" ng-click="clickToOpen()">About</a></li></ul>
         </nav>
@@ -100,7 +114,7 @@
   <div class="cover-container">
    <div class="inner cover">
     <h1 class="cover-heading">{{"Rising Danger"}}</h1>
-    <p class="lead">Between 2000 and 2014, the number of terrorist attacks has been surging. Overall, the most number of deaths occurred in the Middle Eastern region. Use the visualisation below to explore the changes over the years as well as the variation between regions.</p>
+    <p class="lead">Between 2000 and 2014, the number of terrorist attacks has been surging. Overall, the most number of deaths occurred in the Middle Eastern region. <span style="color:#69b271;">Use the visualisation below</span> to explore the changes over the years as well as the variation between regions.</p>
   </div>
 </div>
 
@@ -135,13 +149,13 @@
   <div class="cover-container">
    <div class="inner cover">
     <h1 class="cover-heading">{{"Different Types of Attacks"}}</h1>
-    <p class="lead">Terrorist attacks vary in terms of their weapon type, attack type, and target type. Use the visualisation below to explore more details regarding the terrorist attacks, as well as the variation over the years.</p>
+    <p class="lead">Terrorist attacks vary in terms of their weapon type, attack type, and target type. <span style="color:#69b271;">Use the visualisation below</span> to explore more details regarding the terrorist attacks, as well as the variation over the years.</p>
   </div>
 </div>
 
 <div class='tableauPlaceholder container-center'>
  <noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DB&#47;DB2_8&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript>
- <object class='tableauViz' width='1000' height='1060' style="overflow-y:hidden;">
+ <object class='tableauViz' width='1000' height='900' style="overflow-y:hidden;">
   <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
   <param name='site_root' value='' />
   <param name='name' value='DB2_8&#47;Dashboard2' />
@@ -163,7 +177,7 @@
 <div ng-show="tab.isSet(7)">
   <div class="cover-container">
     <h1 class="cover-heading">{{"Top Groups"}}</h1>
-    <p class="lead">From 2000 to 2014, the top 5 terrorist groups that contributed most to the total number of terrorist attacks include Taliban, CPI-Maoist, Al-Shabaab, Boko Haram, and ISIL. Hover over their icon to find out more information about each group, and use the visualization below to explore the expansion of presence of these groups over the years.</p>
+    <p class="lead">From 2000 to 2014, the top 5 terrorist groups that contributed most to the total number of terrorist attacks include Taliban, CPI-Maoist, Al-Shabaab, Boko Haram, and ISIL. <span style="color:#69b271;">Hover over their icon</span> to find out more information about each group, and use the visualization below to explore the expansion of presence of these groups over the years.</p>
   </div>
 
   <div ng-show="tab.isSet(7)">
