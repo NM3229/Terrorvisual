@@ -2,10 +2,10 @@
  * Globals
  */
 
-/* Links */
-a,
-a:focus,
-a:hover {
+ /* Links */
+ a,
+ a:focus,
+ a:hover {
   color: #fff;
 }
 
@@ -24,8 +24,8 @@ a:hover {
  * Base structure
  */
 
-html,
-body {
+ html,
+ body {
   height: 100%;
   background-color: #333;
 }
@@ -41,7 +41,7 @@ body {
   height: 100%; /* For at least Firefox */
   min-height: 100%;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -49,7 +49,7 @@ body {
 }
 .cover-container {
   margin: 0 auto;
-    width: 80%;
+  width: 80%;
 }
 
 /* Padding for spacing */
@@ -61,7 +61,7 @@ body {
 /*
  * Header
  */
-.masthead-brand {
+ .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -83,37 +83,59 @@ body {
   font-size: 16px;
   font-weight: bold;
   color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: #F23C55;
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
+.masthead-nav > li > a:focus,
+.masthead-brand > li > a:hover,
+.masthead-brand > li > a:focus  {
+  color: #EA2E49;
   background-color: transparent;
-  border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: #fff;
+  border-bottom-color: rgba(255,255,255,.75);
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
+.masthead-nav > .active > a:focus,
+.masthead-brand > .active > a:hover,
+.masthead-brand > .active > a:focus {
+  color: #EA2E49;
   border-bottom-color: #fff;
+}
+
+/* FP07 */
+.masthead-brand a{
+  color: #F23C55;
 }
 
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
+    /*padding: 0 50px;*/
   }
   .masthead-nav {
-    float: right;
+    margin: 0 auto;
+    /*float: left;*/
+    /*float: right;*/
   }
 }
+
+
+/*@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+  }
+}*/
 
 
 /*
  * Cover
  */
 
-.cover {
+ .cover {
   padding: 0 20px;
 }
 .cover .btn-lg {
@@ -126,7 +148,7 @@ body {
  * Footer
  */
 
-.mastfoot {
+ .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
 }
@@ -136,7 +158,7 @@ body {
  * Affix and center
  */
 
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -175,17 +197,10 @@ body {
 }
 
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
 
 .navbar-fixed-top {
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.6);
 }
+
 
 

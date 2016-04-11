@@ -80,6 +80,17 @@ padding: 15px;
 
 }
 
+.tableauPlaceholder{
+  width: 1000px; 
+  height: 1000px;  
+  border-radius: 35px; 
+  overflow-y: hidden;
+}
+
+.masthead-nav{
+  
+}
+
 /*div {
     display: none;
 }
