@@ -83,7 +83,7 @@ padding: 15px;
 .tableauPlaceholder{
   width: 1000px; 
   height: 1000px;  
-  border-radius: 35px; 
+  border-radius: 5px; 
   overflow-y: hidden;
 }
 
