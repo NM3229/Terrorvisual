@@ -25,6 +25,11 @@ body{
 
 }
 
+.tableauViz{
+ font-family: 'Bebas Neue', Arial, sans-serif;
+
+}
+
 .container-center {
   margin: 0 auto;
 }
